@@ -34,7 +34,7 @@ Pricing will be calculated based on Fare definitions (including Operational Area
   - ```Accept```: Content-Types that are acceptable for the response. Non mandatory. We support application/json:
     ```Accept: application/json```
     We may however return other formats, if the request accepts them. The header will then be updated accordingly. Example: 
-    ``` [endpoint]?format=csv```
+    [endpoint]?format=csv
   - ```Content-Type```: Content-Types for PUT / POST requests. We support application/json:
     ```Content-Type: application/json```
   - ```Version```: we are supporting v1 only at the present time. This is not mandatory, so if not present last version will be used. Example:
