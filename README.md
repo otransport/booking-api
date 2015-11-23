@@ -79,21 +79,25 @@ Requests an authorization token by posting using _API-Key_. Upon successful auth
 
 Example request:
 
-  ```curl -X POST -d ‘’ https://booking-api.shiftdispatch.com/auth \
-     -H 'API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1' \
-     -H 'User-Agent: MyProBookings.com’ \
-     -H 'From: admin@myprobookings.com’ \
-     -H 'Accept: application/json’ \
-     -H 'Content-type: application/json’```
+```
+  curl -X POST -d ‘’ https://booking-api.shiftdispatch.com/auth \
+    -H 'API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1' \
+    -H 'User-Agent: MyProBookings.com’ \
+    -H 'From: admin@myprobookings.com’ \
+    -H 'Accept: application/json’ \
+    -H 'Content-type: application/json’
+```
  
 Example response:
 
-  ```HTTP/1.0 201 Created Content-Type: application/json; charset=utf-8  
+```
+  HTTP/1.0 201 Created Content-Type: application/json; charset=utf-8  
   {
     "token": "QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==",
     "created_at": "2015-10-01T09:00:00Z",
     " email":"admin@myprobookings.com" 
-  }```
+  }
+```
  
 
 ### GET /fleet
