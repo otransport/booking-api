@@ -173,6 +173,7 @@ Retrieve the Fleet information.
 Create a new Booking. This action allows a booking to be created and a quote and estimated times to be sent in the response.
 
 #### POST /quotes
+
 The fields "origin" and "destination" are both strings, they can contain either an address which Google Direction API can understand, or a pair of longitude and latitude like "12.3456789,98.7654321".
 
   - Request parameters
@@ -215,6 +216,7 @@ The fields "origin" and "destination" are both strings, they can contain either 
 
   - Response attributes
 	Response (application/javascript)
+´´´
 			{
 				"booking_id":6078271003295744,
 				"ride_id":4590253276921856,
@@ -302,13 +304,14 @@ Dispatch assigns the chosen driver and car to the booking (and ride), and notifi
 
   - Request parameters
 	Request (application/json)
+```
 		Header
-     			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
-     			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
-     			User-Agent: MyProBookings.com
-     			From: admin@myprobookings.com
-     			Accept: application/json
-     			Content-type: application/json
+			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
+			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
+			User-Agent: MyProBookings.com
+			From: admin@myprobookings.com
+			Accept: application/json
+			Content-type: application/json
 		Body
 			{
 				"driver_id": 5634612826996736,
@@ -316,6 +319,7 @@ Dispatch assigns the chosen driver and car to the booking (and ride), and notifi
 				"ride_id": 6580146253332480,
 				"vehicle_id": 5717271485874176
 			}
+```
 
 #### PUT /rides/:id/undispatch
 
@@ -323,21 +327,24 @@ Undispatches a Ride. This endpoint may be removed in future since this function 
 
   - Request parameters
 	Request (application/json)
+```
 		Header
-     			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
-     			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
-     			User-Agent: MyProBookings.com
-     			From: admin@myprobookings.com
-     			Accept: application/json
-     			Content-type: application/json
+			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
+			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
+			User-Agent: MyProBookings.com
+			From: admin@myprobookings.com
+			Accept: application/json
+			Content-type: application/json
 		Body
 			{
 			}
+```
 
 The response will return the Ride information, and a HTTP 200OK:
 
   - Response attributes
 	Response (application/javascript)
+```
 			{
 			    booking = 5354664308506624
 			    created = "2015-10-23T15:24:01.820423Z"
@@ -406,6 +413,7 @@ The response will return the Ride information, and a HTTP 200OK:
 			    total = "6.416666666666667"
 			    "vehicle_type" = 0
 			}
+```
 
 
 ### Driver Vehicle Status
@@ -417,15 +425,18 @@ ride_id can not be empty or an invalid value for parsing as int64.
 
   - Request parameters
 	Request (application/json)
+```
 		Header
-     			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
-     			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
-     			User-Agent: MyProBookings.com
-     			From: admin@myprobookings.com
-     			Accept: application/json
-     			Content-type: application/json
+			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
+			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
+			User-Agent: MyProBookings.com
+			From: admin@myprobookings.com
+			Accept: application/json
+			Content-type: application/json
 		Body
+```
 	Response (application/javascript)
+```
 		Header
 		Body
 			[{
@@ -456,6 +467,7 @@ ride_id can not be empty or an invalid value for parsing as int64.
 					}
 				]
 			  }]
+```
 
 #### GET  /status/vehicle/:vehicle_id/driver/:driver_id 
 
@@ -463,17 +475,20 @@ Gets the present status and location for a drivers vehicle
 
   - Request parameters
 	Request (application/json)
+```
 		Header
-     			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
-     			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
-     			User-Agent: MyProBookings.com
-     			From: admin@myprobookings.com
-     			Accept: application/json
-     			Content-type: application/json
+			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
+			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
+			User-Agent: MyProBookings.com
+			From: admin@myprobookings.com
+			Accept: application/json
+			Content-type: application/json
 		Body
+```
 
   - Response attributes
 	Response (application/javascript)
+```
 		Header
 		Body
 			{  
@@ -489,6 +504,7 @@ Gets the present status and location for a drivers vehicle
 				"logo_url":"https://storage.googleapis.com/shift-driver-api-drivers-photo/photo_driver_5139717033033728?v=1439899064",
 				"logo_url_small":"https://lh3.googleusercontent.com/n2KSvsZSbV59oSFUdHfMSYSQbocDz3MljW5LPKg_SDogYaFRABwsKMA7iWBBFucUtmbd5RMqkmxznZmoDa5dr7MFtVRUcmQFZA=s200"
 			}
+```
 
 
 ### Passengers 
@@ -498,16 +514,19 @@ Gets the present status and location for a drivers vehicle
 Retrieve a list of the passengers
 
 	Request (application/json)
+```
 		Header
-     			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
-     			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
-     			User-Agent: MyProBookings.com
-     			From: admin@myprobookings.com
-     			Accept: application/json
-     			Content-type: application/json
+			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
+			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
+			User-Agent: MyProBookings.com
+			From: admin@myprobookings.com
+			Accept: application/json
+			Content-type: application/json
 		Body
+```
 
 	Response (application/javascript)
+```
 		Header
 		Body
 			[{
@@ -531,22 +550,26 @@ Retrieve a list of the passengers
 			    "fleet_id": 5112317826039808,
 			    "mobile_phone_number": "+361234567890"
 			}]
+```
 
 #### GET /passengers?passenger={"field":"value"}
 
 Retrieve a filtered list of the fleet's passengers. Takes url encoded passenger as parameter: /query/passenger?passenger={"field":"value"}
 
 	Request (application/json)
+```
 		Header
-     			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
-     			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
-     			User-Agent: MyProBookings.com
-     			From: admin@myprobookings.com
-     			Accept: application/json
-     			Content-type: application/json
+			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
+			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
+			User-Agent: MyProBookings.com
+			From: admin@myprobookings.com
+			Accept: application/json
+			Content-type: application/json
 		Body
+```
 
 	Response (application/javascript)
+```
 		Header
 		Body
 			[{
@@ -570,22 +593,26 @@ Retrieve a filtered list of the fleet's passengers. Takes url encoded passenger 
 			    "fleet_id": 5112317826039808,
 			    "mobile_phone_number": "+361234567890"
 			}]
+```
 
 
 #### GET /passengers/:id
 Retrieve a single passenger
 
 	Request (application/json)
+```
 		Header
-     			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
-     			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
-     			User-Agent: MyProBookings.com
-     			From: admin@myprobookings.com
-     			Accept: application/json
-     			Content-type: application/json
+			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
+			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
+			User-Agent: MyProBookings.com
+			From: admin@myprobookings.com
+			Accept: application/json
+			Content-type: application/json
 		Body
+```
 
 	Response (application/javascript)
+```
 		Header
 		Body
 			{
@@ -600,6 +627,7 @@ Retrieve a single passenger
 			    "team_id": -1,
 			    "mobile_phone_number": "+361234567890"
 			}
+```
 
 #### POST /passengers
 
@@ -611,13 +639,14 @@ Create new passenger Object (for internal use). New Passenger is sent with Booki
 Update a passenger information. The payload contains the properties to update.
 
 	Request (application/json)
+```
 		Header
-     			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
-     			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
-     			User-Agent: MyProBookings.com
-     			From: admin@myprobookings.com
-     			Accept: application/json
-     			Content-type: application/json
+			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
+			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
+			User-Agent: MyProBookings.com
+			From: admin@myprobookings.com
+			Accept: application/json
+			Content-type: application/json
 		Body
 			{
 				"first_name": "Merlin",
@@ -626,8 +655,10 @@ Update a passenger information. The payload contains the properties to update.
 				"team_id": -1,
 				"mobile_phone_number": "+361234567890"
 			}
+```
 
 	Response (application/javascript)
+```
 		Header
 		Body
 			{
@@ -642,18 +673,20 @@ Update a passenger information. The payload contains the properties to update.
 				"team_id": -1,
 				"mobile_phone_number": "+361234567890"
 			}
+```
 
 #### DELETE /passengers/:id
 Remove passenger
 
 	Request (application/json)
+```
 		Header
-     			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
-     			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
-     			User-Agent: MyProBookings.com
-     			From: admin@myprobookings.com
-     			Accept: application/json
-     			Content-type: application/json
+			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
+			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
+			User-Agent: MyProBookings.com
+			From: admin@myprobookings.com
+			Accept: application/json
+			Content-type: application/json
 		Body
 			{
 				"first_name": "Merlin",
@@ -662,10 +695,13 @@ Remove passenger
 				"team_id": -1,
 				"mobile_phone_number": "+361234567890"
 			}
+```
 	Response (application/javascript)
+```
 		Header
 		Body
 			{}
+```
 
 
 ### end
