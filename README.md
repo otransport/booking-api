@@ -1,7 +1,5 @@
 # Booking-API
 
-Booking API
-
 Booking API provides clients the ability to, from other platforms, create and retrieve information into/from our system about bookings. It will allow client platforms to book rides.
 
 ### Introduction
@@ -9,7 +7,9 @@ Booking API provides clients the ability to, from other platforms, create and re
 Clients should configure all the _Settings_ are first on our platform. Fleets, Fares, Operational Areas shoud be configured inside ShiftDispatch.
 
 All the requests should obey the format: 
-  ```https://booking-api.shiftdispatch.com/:resource[/:action[?:params]]```
+```
+  https://booking-api.shiftdispatch.com/:resource[/:action[?:params]]
+```
  
 All timestamps are represented as _ISO 8601_ format _YYYY-MM-DDTHH:MM:SSZ_.
 
