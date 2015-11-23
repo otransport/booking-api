@@ -442,7 +442,9 @@ ride_id can not be empty or an invalid value for parsing as int64.
 			Content-type: application/json
 		Body
 ```
+
 	Response (application/javascript)
+
 ```
 		Header
 		Body
