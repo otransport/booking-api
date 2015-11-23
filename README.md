@@ -91,11 +91,11 @@ Example request:
 Example response:
 
 ```
-  HTTP/1.0 201 Created Content-Type: application/json; charset=utf-8  
+  HTTP/1.0 201 Created; Content-Type: application/json; charset=utf-8  
   {
     "token": "QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==",
     "created_at": "2015-10-01T09:00:00Z",
-    " email":"admin@myprobookings.com" 
+    "email":"admin@myprobookings.com" 
   }
 ```
  
