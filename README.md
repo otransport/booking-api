@@ -443,8 +443,9 @@ ride_id can not be empty or an invalid value for parsing as int64.
 		Body
 ```
 
-	Response (application/javascript)
+  - Response attributes
 
+	Response (application/javascript)
 ```
 		Header
 		Body
@@ -524,6 +525,8 @@ Gets the present status and location for a drivers vehicle
 
 Retrieve a list of the passengers
 
+  - Request parameters
+
 	Request (application/json)
 ```
 		Header
@@ -535,6 +538,9 @@ Retrieve a list of the passengers
 			Content-type: application/json
 		Body
 ```
+
+
+  - Response attributes
 
 	Response (application/javascript)
 ```
@@ -567,6 +573,8 @@ Retrieve a list of the passengers
 
 Retrieve a filtered list of the fleet's passengers. Takes url encoded passenger as parameter: /query/passenger?passenger={"field":"value"}
 
+  - Request parameters
+
 	Request (application/json)
 ```
 		Header
@@ -578,6 +586,8 @@ Retrieve a filtered list of the fleet's passengers. Takes url encoded passenger 
 			Content-type: application/json
 		Body
 ```
+
+  - Response attributes
 
 	Response (application/javascript)
 ```
@@ -610,6 +620,8 @@ Retrieve a filtered list of the fleet's passengers. Takes url encoded passenger 
 #### GET /passengers/:id
 Retrieve a single passenger
 
+  - Request parameters
+
 	Request (application/json)
 ```
 		Header
@@ -621,6 +633,8 @@ Retrieve a single passenger
 			Content-type: application/json
 		Body
 ```
+
+  - Response attributes
 
 	Response (application/javascript)
 ```
@@ -649,6 +663,8 @@ Create new passenger Object (for internal use). New Passenger is sent with Booki
 
 Update a passenger information. The payload contains the properties to update.
 
+  - Request parameters
+
 	Request (application/json)
 ```
 		Header
@@ -667,6 +683,8 @@ Update a passenger information. The payload contains the properties to update.
 				"mobile_phone_number": "+361234567890"
 			}
 ```
+
+  - Response attributes
 
 	Response (application/javascript)
 ```
@@ -689,6 +707,8 @@ Update a passenger information. The payload contains the properties to update.
 #### DELETE /passengers/:id
 Remove passenger
 
+  - Request parameters
+
 	Request (application/json)
 ```
 		Header
@@ -707,6 +727,9 @@ Remove passenger
 				"mobile_phone_number": "+361234567890"
 			}
 ```
+
+  - Response attributes
+
 	Response (application/javascript)
 ```
 		Header
