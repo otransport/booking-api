@@ -172,7 +172,8 @@ Retrieve the Fleet information.
 
 Create a new Booking. This action allows a booking to be created and a quote and estimated times to be sent in the response.
 
-#### POST /quotes . The fields "origin" and "destination" are both strings, they can contain either an address which Google Direction API can understand, or a pair of longitude and latitude like "12.3456789,98.7654321".
+#### POST /quotes
+The fields "origin" and "destination" are both strings, they can contain either an address which Google Direction API can understand, or a pair of longitude and latitude like "12.3456789,98.7654321".
 
   - Request parameters
 	Request (application/json)
