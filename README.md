@@ -62,7 +62,9 @@ We only accept *HTTPS* requests.
 
 Authentication is done on every request by sending a token as an Authorization header:
   ```curl https://booking-api.shiftdispatch.com \
+
      -H "API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1" \
+
      -H "Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u=="```
 
 Authorization token can be requested via programmatically using basic authentication through ```/auth```.
