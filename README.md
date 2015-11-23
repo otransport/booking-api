@@ -29,18 +29,31 @@ Pricing will be calculated based on Fare definitions (including Operational Area
     ```User-Agent: MyProBookings.com```
 
   - ```API-Key```: this is the secret API key. A client can get his API-Key on the settings area inside our platform. Once an API-Key is created, will not change. Example: 
+
     ```API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1```
+
   - ```Authorization```: authentication credential for HTTP authentication. You have some control over your Authorization, namely you can reset it so that a new one will be sent to the email. Example: 
+
     ```Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==```
+
   - ```From```: the email address of the client making the request. Example:
+
     ```From: user@example.com```
+
   - ```Accept```: Content-Types that are acceptable for the response. Non mandatory. We support application/json:
+
     ```Accept: application/json```
+
     We may however return other formats, if the request accepts them. The header will then be updated accordingly. Example: 
+
     [endpoint]?format=csv
+
   - ```Content-Type```: Content-Types for PUT / POST requests. We support application/json:
+
     ```Content-Type: application/json```
+
   - ```Version```: we are supporting v1 only at the present time. This is not mandatory, so if not present last version will be used. Example:
+
     ```Version: v1```
 
 ### Authentication
