@@ -106,6 +106,7 @@ Retrieve the Fleet information.
 
   - Request parameters
 	Request (application/json)
+```
 		Header
      			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
      			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
@@ -114,9 +115,11 @@ Retrieve the Fleet information.
      			Accept: application/json
      			Content-type: application/json
 		Body
+```
 
   - Response attributes
 	Response (application/javascript)
+```
 		Header
 		Body
 			{
@@ -140,6 +143,7 @@ Retrieve the Fleet information.
 			    "payment_method_id": 0,
 			    "vat": "20",
 			}
+```
 
   - Example request
 
