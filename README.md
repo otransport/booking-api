@@ -177,6 +177,7 @@ Create a new Booking. This action allows a booking to be created and a quote and
 The fields "origin" and "destination" are both strings, they can contain either an address which Google Direction API can understand, or a pair of longitude and latitude like "12.3456789,98.7654321".
 
   - Request parameters
+
 	Request (application/json)
 ´´´
 		Header
@@ -215,6 +216,7 @@ The fields "origin" and "destination" are both strings, they can contain either 
   - The response will contain the list of available drivers, the driver's vehicles, and quotes for each driver+vehicle pair.
 
   - Response attributes
+
 	Response (application/javascript)
 ´´´
 			{
@@ -303,6 +305,7 @@ Dispatch assigns the chosen driver and car to the booking (and ride), and notifi
 #### POST /dispatch
 
   - Request parameters
+
 	Request (application/json)
 ```
 		Header
@@ -326,6 +329,7 @@ Dispatch assigns the chosen driver and car to the booking (and ride), and notifi
 Undispatches a Ride. This endpoint may be removed in future since this function should be performed by the backend.
 
   - Request parameters
+
 	Request (application/json)
 ```
 		Header
@@ -343,6 +347,7 @@ Undispatches a Ride. This endpoint may be removed in future since this function 
 The response will return the Ride information, and a HTTP 200OK:
 
   - Response attributes
+
 	Response (application/javascript)
 ```
 			{
@@ -424,6 +429,7 @@ It is possible to retrieve a new list of drivers and quotes for an existing ride
 ride_id can not be empty or an invalid value for parsing as int64.
 
   - Request parameters
+
 	Request (application/json)
 ```
 		Header
@@ -474,6 +480,7 @@ ride_id can not be empty or an invalid value for parsing as int64.
 Gets the present status and location for a drivers vehicle
 
   - Request parameters
+
 	Request (application/json)
 ```
 		Header
@@ -487,6 +494,7 @@ Gets the present status and location for a drivers vehicle
 ```
 
   - Response attributes
+
 	Response (application/javascript)
 ```
 		Header
