@@ -24,7 +24,7 @@ Pricing will be calculated based on Fare definitions (including Operational Area
 
 ### Headers
 
-  - ```User-Agent```: your platform name. Example:
+  - ```User-Agent```: your platform name. Example: \n
     ```User-Agent: MyProBookings.com```
   - ```API-Key```: this is the secret API key. A client can get his API-Key on the settings area inside our platform. Once an API-Key is created, will not change. Example: 
     ```API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1```
