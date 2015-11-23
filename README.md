@@ -92,11 +92,12 @@ Example response:
 
 ```
   HTTP/1.0 201 Created; Content-Type: application/json; charset=utf-8  
-  {
-    "token": "QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==",
-    "created_at": "2015-10-01T09:00:00Z",
-    "email":"admin@myprobookings.com" 
-  }
+
+	{
+		"token": "QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==",
+		"created_at": "2015-10-01T09:00:00Z",
+		"email":"admin@myprobookings.com" 
+	}
 ```
  
 
@@ -108,12 +109,12 @@ Retrieve the Fleet information.
 	Request (application/json)
 ```
 		Header
-     			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
-     			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
-     			User-Agent: MyProBookings.com
-     			From: admin@myprobookings.com
-     			Accept: application/json
-     			Content-type: application/json
+			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
+			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
+			User-Agent: MyProBookings.com
+			From: admin@myprobookings.com
+			Accept: application/json
+			Content-type: application/json
 		Body
 ```
 
@@ -147,23 +148,27 @@ Retrieve the Fleet information.
 
   - Example request
 
-  ```curl -X GET https://booking-api.shiftdispatch.com/fleet \
-     -H 'API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1' \
-     -H 'Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==' \
-     -H 'User-Agent: MyProBookings.com’ \
-     -H 'From: admin@myprobookings.com’ \
-     -H 'Accept: application/json ’ \
-     -H 'Content-type: application/json’```
+```
+  curl -X GET https://booking-api.shiftdispatch.com/fleet \
+    -H 'API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1' \
+    -H 'Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==' \
+    -H 'User-Agent: MyProBookings.com’ \
+    -H 'From: admin@myprobookings.com’ \
+    -H 'Accept: application/json ’ \
+    -H 'Content-type: application/json’
+```
 
   - Example response
 
-  ```HTTP/1.0 200 OK Content-Type: application/json; charset=utf-8 
+```
+  HTTP/1.0 200 OK; Content-Type: application/json; charset=utf-8 
 
-    {
-      "": "",
-    }```
+	{
+		"": "",
+	}
+```
 
-### Bbookings
+### Bookings
 
 Create a new Booking. This action allows a booking to be created and a quote and estimated times to be sent in the response.
 
@@ -171,37 +176,39 @@ Create a new Booking. This action allows a booking to be created and a quote and
 
   - Request parameters
 	Request (application/json)
+´´´
 		Header
-     			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
-     			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
-     			User-Agent: MyProBookings.com
-     			From: admin@myprobookings.com
-     			Accept: application/json
-     			Content-type: application/json
+			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
+			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
+			User-Agent: MyProBookings.com
+			From: admin@myprobookings.com
+			Accept: application/json
+			Content-type: application/json
 		Body
 			{
-    				"pickup_time":"2015-07-13T11:14:25.434105125+02:00",
-  				"dropoff_time":"2015-07-13T11:14:25.434105159+02:00",
-    				"origin":"London Borough of Hillingdon, United Kingdom",
-    				"destination":"London Heathrow Airport, Longford, United Kingdom",
+				"pickup_time":"2015-07-13T11:14:25.434105125+02:00",
+				"dropoff_time":"2015-07-13T11:14:25.434105159+02:00",
+				"origin":"London Borough of Hillingdon, United Kingdom",
+				"destination":"London Heathrow Airport, Longford, United Kingdom",
 				"type": "regular",
 				"passenger": 23456789101,
 				"full_name": "John F. Doe",
 				"email": "johnfdoe@example.com",
 				"phone_number":"+1234567890",
-    				"payment":{
-    					"type":"pre",
-    					"method":"credit",
-    					"options":{
-    						"cash":{
-    							"pay_to":""
-    						},"credit":{
-    							"provider":"braintree",
-    							"last4":"1234"
-    						}
-    					}
-    				}
+				"payment":{
+					"type":"pre",
+					"method":"credit",
+					"options":{
+						"cash":{
+							"pay_to":""
+						},"credit":{
+							"provider":"braintree",
+							"last4":"1234"
+						}
+					}
+				}
 			}
+´´´
 
   - The response will contain the list of available drivers, the driver's vehicles, and quotes for each driver+vehicle pair.
 
