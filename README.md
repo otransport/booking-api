@@ -179,7 +179,8 @@ The fields "origin" and "destination" are both strings, they can contain either 
   - Request parameters
 
 	Request (application/json)
-´´´
+
+```
 		Header
 			API-Key: 00379cdef1274bd2dd3cb6d9fccab3e9e5c6ac8594dd8ae5b2839843dc0ca1c1
 			Authorization: QjFsnEBXMVejoet0GBOQSZKMk03jfnf3v9u==
@@ -211,14 +212,14 @@ The fields "origin" and "destination" are both strings, they can contain either 
 					}
 				}
 			}
-´´´
+```
 
   - The response will contain the list of available drivers, the driver's vehicles, and quotes for each driver+vehicle pair.
 
   - Response attributes
 
 	Response (application/javascript)
-´´´
+```
 			{
 				"booking_id":6078271003295744,
 				"ride_id":4590253276921856,
